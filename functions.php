@@ -25,3 +25,27 @@ add_action('wp_enqueue_scripts', 'dnpb_loadscripts');
  **/
 
 add_theme_support('post-thumbnails');
+
+/**
+ *	Add menu support to theme
+ **/
+
+function register_dnpb_menus() {
+  register_nav_menus(
+    [
+		'main-menu' => __( 'Main Menu' ),
+      'top-menu' => __( 'Top Menu' )
+    ]
+  );
+}
+add_action( 'init', 'register_dnpb_menus' );
+
+/**
+ * Show home menu
+ **/
+
+function dnpb_home_page_menu_args( $args ) {
+	$args['show_home'] = true;
+	return $args;
+}
+add_filter( 'wp_page_menu_args', 'dnpb_home_page_menu_args' );

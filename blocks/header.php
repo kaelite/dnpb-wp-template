@@ -13,13 +13,21 @@
 								<div class="row">
 									<div class="col-md-12">
 										<center>
-										<ul class="nav nav-pills dnpb_topmenu">
+										<? wp_nav_menu( 
+											[
+												'theme_location' => 'top-menu',
+												'container' => false,
+												'menu_class' => "nav nav-pills dnpb_topmenu"
+											] 
+										); 
+										?>
+										<!-- <ul class="nav nav-pills dnpb_topmenu">
 										  <li role="presentation"><a href="#">Головна</a></li>
 										  <li role="presentation"><a href="#">Контакти</a></li>
 										  <li role="presentation"><a href="#">Допомога онлайн</a></li>
 										  <li role="presentation"><a href="#">Мапа сайту</a></li>
 										  <li role="presentation"><a href="#">Статистика</a></li>
-										</ul>	
+										</ul>-->	
 										</center>
 									</div>
 									<div class="col-md-12 dnpb_title">
