@@ -12,6 +12,17 @@
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<? wp_nav_menu(
+			[
+				'theme_location' => 'main-menu',
+				'container' => false,
+				'menu_class' => "nav navbar-nav dnpb_mainmenu",
+				'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+				'walker' => new wp_bootstrap_navwalker()
+			]
+		);
+		?>
+<!--
 	  <ul class="nav navbar-nav dnpb_mainmenu">
 		<li class="active"><a href="http://v2.dnpb.gov.ua/index.php">Про бібліотеку<span class="sr-only">(current)</span></a></li>
 		<li><a href="http://v2.dnpb.gov.ua/index.php?page=inner1">Послуги</a></li>
@@ -38,7 +49,7 @@
 		</li>
 		<li><a href="#">Галерея</a></li>
 	  </ul>
-	  
+	-->  
 		<form class="navbar-form navbar-right hidden-sm hidden-md" role="search">
 		  <div class="form-group">
 			<input type="text" class="form-control" placeholder="Пошук">

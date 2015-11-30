@@ -3,9 +3,15 @@
 					<section class="dnpb_block">
 						<div class="row">
 							<div class="col-md-7">
-								<!-- <img src="./img/build_photo.jpg" alt=""> -->
+										<? $slider = new WP_Query(['post_type'=>'slider', 'posts_per_page'=>-1, 'order'=>'ASC']);?>
 								<div id="carousel" class="carousel slide" data-ride="carousel">
 									<ol class="carousel-indicators">
+										<? if ( $slider->have_posts() ) : while ( $slider->have_posts() ) : $slider->the_post(); ?>
+										<li data-target="#carousel" data-slide-to="<?=$slider->current_post;?>" <?if( $slider->current_post == 0 && !is_paged() ) { echo "class=\"active\""; }?>></li>
+										<? endwhile; ?>
+										<? else: ?>
+										<? endif;?>
+										<!--
 										<li data-target="#carousel" data-slide-to="0" class="active"></li>
 										<li data-target="#carousel" data-slide-to="1"></li>
 										<li data-target="#carousel" data-slide-to="2"></li>
@@ -15,9 +21,18 @@
 										<li data-target="#carousel" data-slide-to="6"></li>
 										<li data-target="#carousel" data-slide-to="7"></li>
 										<li data-target="#carousel" data-slide-to="8"></li>
-
+										-->
 									</ol>
 									<div class="carousel-inner">
+										<? if ( $slider->have_posts() ) : while ( $slider->have_posts() ) : $slider->the_post(); ?>
+										<div class="item<?if( $slider->current_post == 0 && !is_paged() ) { echo " active"; }?>">
+											<? the_post_thumbnail([510,300]); ?>	
+										</div>
+										<? endwhile; ?>
+										<? else: ?>
+										<? endif;?>
+
+<!--
 										<div class="item active">
 											<img src="./slider/1.JPG" width="510" alt="Image">
 											
@@ -60,29 +75,8 @@
 										<div class="item">
 											<img src="./slider/7.jpg" width="510" alt="Image">
 											<div class="carousel-caption">«Бібліотек@ - територія єдності»</div>
-										</div>
+										</div> -->
 
-										<!--
-										<div class="item active">
-											<img src="http://lorempixel.com/510/300/?1" alt="Image">
-											<div class="carousel-caption">This is a caption 1</div>
-										</div>
-										<div class="item">
-											<img src="http://lorempixel.com/510/300/?2" alt="Image">
-											<div class="carousel-caption">This is a caption 2</div>
-										</div>
-										<div class="item">
-											<img src="http://lorempixel.com/510/300/abstract?3" alt="Image">
-											<div class="carousel-caption">This is a caption 3</div>
-										</div>-->
-										<!-- Controls -->
-										<!--
-              <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>-->
 									</div>
 								</div>
 							</div>
