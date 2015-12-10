@@ -50,9 +50,15 @@
 		<li><a href="#">Галерея</a></li>
 	  </ul>
 	-->  
-		<form class="navbar-form navbar-right hidden-sm hidden-md" role="search">
+		<form 
+			class="navbar-form navbar-right hidden-sm hidden-md searchform" 
+			role="search"
+			method="get"
+			id="searchform"
+			action="<?php echo esc_url( home_url( '/' ) ); ?>"
+>
 		  <div class="form-group">
-			<input type="text" class="form-control" placeholder="Пошук">
+		  <input type="text" class="form-control" placeholder="Пошук" name="s" id="s" value="<? the_search_query(); ?>">
 			<!--<input type="image" onclick="this.form.submit()" src="./img/btn_search.png" name="submit" alt="Search" class="form-control dnpb_btn_search"> -->
 		  </div>
 		</form>						

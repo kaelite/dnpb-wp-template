@@ -3,32 +3,20 @@
 	<div class="row">
 		<div class="col-md-8">
 <section class="dnpb_block">
-
-
-<div class="row">
-	<div class="col-md-12">
-		<h3><? the_title(); ?></h3>
-		<p class="dnpb_date"><?=get_the_date();?></p>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-6">
-		<p>
-			<?=get_the_excerpt();?>
-		</p>
-	</div>
-	<div class="col-md-6">
-<?php 
-if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-	the_post_thumbnail('medium');
-} 
-?>
-	</div>
-</div>
+<h3><?php post_type_archive_title( '', true ); ?></h3>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<? the_content() ?>
+<div class="media dnpb_innerblock">
+        <h5><font color="#663300">08.05.2015</font></h5>
+		<a class="pull-left" href="<? the_permalink() ?>">
+			<? the_post_thumbnail([120,0], ['alt' => 'image']) ?>
+        </a>
+        <div class="media-body">
+                <p>
+<? the_excerpt() ?>
+                </p>
+        </div>
+</div>
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>

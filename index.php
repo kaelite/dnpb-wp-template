@@ -3,7 +3,11 @@
 	<div class="row">
 		<div class="col-md-8">
 <section class="dnpb_block">
-        <h3>Анонси та оголошення</h3>
+<h3>
+<?php $post_type = get_post_type_object( get_post_type($post) );
+
+echo $post_type->label ; ?>
+</h3>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="media dnpb_innerblock">

@@ -14,7 +14,7 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/apple-touch-icon.png">
-
+	<base href="<?=get_site_url(); ?>" />
 
 	<?php wp_head(); ?>
 </head>

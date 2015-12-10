@@ -1,33 +1,34 @@
 <?
-class DNPB_Announcements_Widget extends WP_Widget{
+class DNPB_Gallery_Widget extends WP_Widget{
+	var $post_type = "slider";
 
 	function __construct() {
 		parent::__construct(
-			'Announcements_widget', // Base ID
-			'Top Announcements', // Name
-			array('description' => __( 'Displays your latest listings. Outputs the post thumbnail, title and date per listing'))
+			'gallery_widget', // Base ID
+			'Gallery', // Name
+			array('description' => __( 'Displays slider'))
 		   );
 	}
 
 	function update($new_instance, $old_instance) {
 			$instance = $old_instance;
-			$instance['title'] = strip_tags($new_instance['title']);
+			$instance['text'] = $new_instance['text'];
 			$instance['numberOfListings'] = strip_tags($new_instance['numberOfListings']);
 			return $instance;
 	}
 
 	function form($instance) {
 	if( $instance) {
-		$title = esc_attr($instance['title']);
+		$text = esc_attr($instance['text']);
 		$numberOfListings = esc_attr($instance['numberOfListings']);
 	} else {
-		$title = '';
+		$text = '';
 		$numberOfListings = '';
 	}
 	?>
 		<p>
-		<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'realty_widget'); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+		<label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text', 'slider_widget'); ?></label>
+		<textarea class="widefat" name="<?php echo $this->get_field_name('text') ?>"><?php echo esc_attr($text) ?></textarea>
 		</p>
 		<p>
 		<label for="<?php echo $this->get_field_id('numberOfListings'); ?>"><?php _e('Number of Listings:', 'realty_widget'); ?></label>
@@ -42,37 +43,59 @@ class DNPB_Announcements_Widget extends WP_Widget{
 
 	function widget($args, $instance) {
 		extract( $args );
-		$title = apply_filters('widget_title', $instance['title']);
+		$text = apply_filters('widget_text', $instance['text']);
 		$numberOfListings = $instance['numberOfListings'];
 		echo $before_widget;
-		if ( $title ) {
-			echo $before_title . $title . $after_title;
-		}
-		$this->getItems($numberOfListings);
+		$this->getItems($numberOfListings, $text);
 		echo $after_widget;
 	}
 
 
-	function getItems($numberOfListings) { //html
+	function getItems($numberOfListings, $text) { //html
 		global $post;
-		add_image_size( 'realty_widget_size', 85, 45, false );
+		add_image_size( 'slider_widget_size', 510, 300, false );
 		$listings = new WP_Query();
-		$listings->query('post_type=announcements&posts_per_page=' . $numberOfListings );
+		$listings->query('post_type='.$this->post_type.'&posts_per_page=' . $numberOfListings );
 		if($listings->found_posts > 0) {
-			echo "<div class=\"row\"><div class=\"col-md-12\">";
-				while ($listings->have_posts()) {
-
-					$listings->the_post();
-					$image = (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, 'realty_widget_size') : '<div class="noThumb"></div>';
-					$date = '<p class="dnpb_date">'.get_the_date().'</p>';
-					$listItem = '<div class="media">'.$date . $image;
-					$listItem .= get_the_content();
-					$listItem .= '</div>';
-					echo $listItem;
-				}
-				echo "<a href=\"#\" class=\"pull-right dnpb-link\">".__("Всі матеріали")."</a>";
-				echo "</div></div>";
+?>
+		<div class="row">
+			<div class="col-md-7">
+				<div id="carousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+<?
+			while ($listings->have_posts()) {
+				$listings->the_post();
+?>
+<li data-target="#carousel" data-slide-to="<?=$listings->current_post;?>" <?if( $listings->current_post == 0 && !is_paged() ) { echo "class=\"active\""; }?>></li>
+<?
+			}
+			$listings->rewind_posts();
+?>
+				</ol>
+				<div class="carousel-inner">
+<?
+			while ($listings->have_posts()) {
+				$listings->the_post();
+?>
+				<div class="item<?if( $listings->current_post == 0 && !is_paged() ) { echo " active"; }?>">
+					<? the_post_thumbnail('slider_widget_size'); ?>
+				</div>
+<?
+			}
 			wp_reset_postdata();
+?>
+				</div>
+				</div>
+			</div>
+		   <div class="col-md-5">
+				<section>
+					<p>
+<?= $text?>
+					</p>
+				</section>
+			</div>
+		</div>
+<?
 		}else{
 			echo '<p style="padding:25px;">No listing found</p>';
 		}

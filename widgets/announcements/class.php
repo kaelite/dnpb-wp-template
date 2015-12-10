@@ -1,6 +1,7 @@
 <?
 class DNPB_Announcements_Widget extends WP_Widget{
 
+	var $post_type="announcements";
 	function __construct() {
 		parent::__construct(
 			'Announcements_widget', // Base ID
@@ -46,7 +47,7 @@ class DNPB_Announcements_Widget extends WP_Widget{
 		$numberOfListings = $instance['numberOfListings'];
 		echo $before_widget;
 		if ( $title ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . '<a href="' . get_post_type_archive_link( $this->post_type ) . '">' . $title . '</a>' . $after_title;
 		}
 		$this->getItems($numberOfListings);
 		echo $after_widget;
@@ -57,7 +58,7 @@ class DNPB_Announcements_Widget extends WP_Widget{
 		global $post;
 		add_image_size( 'realty_widget_size', 85, 45, false );
 		$listings = new WP_Query();
-		$listings->query('post_type=announcements&posts_per_page=' . $numberOfListings );
+		$listings->query('post_type='.$this->post_type.'&posts_per_page=' . $numberOfListings );
 		if($listings->found_posts > 0) {
 			echo "<div class=\"row\"><div class=\"col-md-12\">";
 				while ($listings->have_posts()) {
@@ -70,8 +71,9 @@ class DNPB_Announcements_Widget extends WP_Widget{
 					$listItem .= '</div>';
 					echo $listItem;
 				}
-				echo "<a href=\"#\" class=\"pull-right dnpb-link\">".__("Всі матеріали")."</a>";
-				echo "</div></div>";
+?>
+	<a href="<?=get_post_type_archive_link( $this->post_type );?>" class="pull-right dnpb-link"><?=__('Всі матеріали');?></a>
+<?				echo "</div></div>";
 			wp_reset_postdata();
 		}else{
 			echo '<p style="padding:25px;">No listing found</p>';
