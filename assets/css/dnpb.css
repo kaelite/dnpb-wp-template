@@ -432,6 +432,14 @@ ul.nav.navbar-nav.dnpb_mainmenu li > ul.dropdown-menu {
 ul.nav.navbar-nav.dnpb_mainmenu li > ul.dropdown-menu a{
 	color: #4b423f;
 }
+
+
+.dropdown-menu > .active > a{
+	color: #4b423f;
+	background-color:#baa898;
+	background-image: none;
+}
+
 ul.nav.navbar-nav.dnpb_mainmenu li > ul.dropdown-menu a:hover{
 	color:white;
 	background-color:#baa898;
