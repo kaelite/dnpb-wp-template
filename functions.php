@@ -21,6 +21,8 @@ function dnpb_loadscripts(){
 	/* Scripts */
 	wp_enqueue_script('jquery', get_template_directory_uri().'/assets/js/jquery.js');
 	wp_enqueue_script('bootstrap', get_template_directory_uri().'/assets/js/bootstrap.js');
+	wp_enqueue_script('hoverIntent', get_template_directory_uri().'/assets/js/jquery.hoverIntent.js');
+	wp_enqueue_script('dnpb_menu', get_template_directory_uri().'/assets/js/dnpb_menu.js');
 }
 
 add_action('wp_enqueue_scripts', 'dnpb_loadscripts');
