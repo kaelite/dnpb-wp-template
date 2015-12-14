@@ -456,3 +456,6 @@ ul.nav.navbar-nav.dnpb_mainmenu li > ul.dropdown-menu a:hover{
 .dnpb_block td {
 	padding:5px;
 }
+.dnpb_block section {
+	margin-top: -7px;
+}

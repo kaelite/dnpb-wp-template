@@ -15,7 +15,7 @@ function dnpb_loadscripts(){
 	wp_enqueue_style('bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css');
 	wp_enqueue_style('bootstrap-theme', get_template_directory_uri().'/assets/css/bootstrap-theme.min.css');
 	wp_enqueue_style('font-awesome', get_template_directory_uri().'/assets/font-awesome/css/font-awesome.min.css');
-	wp_enqueue_style('fonts', get_template_directory_uri().'/assets/css/fonts.css');
+	wp_enqueue_style('dnpb_fonts', get_template_directory_uri().'/assets/css/fonts.css');
 	wp_enqueue_style('dnpb', get_template_directory_uri().'/assets/css/dnpb.css');
 
 	/* Scripts */
