@@ -30,6 +30,8 @@
 										</ul>-->	
 										</center>
 									</div>
+<?include('title.php');?>
+<!--
 									<div class="col-md-12 dnpb_title">
 <center>									
 <small>НАЦІОНАЛЬНА АКАДЕМІЯ ПЕДАГОГІЧНИХ НАУК УКРАЇНИ</small>
@@ -43,6 +45,7 @@
 </center>
 
 									</div>
+-->
 								</div>
 							
 							</div>
@@ -53,13 +56,17 @@
 										<? if(count($dnpb_langs)): ?>
 										<ul class="nav nav-pills dnpb_langmenu hidden-md hidden-sm">
 											<?foreach($dnpb_langs as $lang):?>
-											<li role="presentation" <? if ($lang["current_lang"]):?> class="active" <? endif;?>><a href="<?=pll_home_url($lang["slug"]);?>"><?=$lang["name"];?></a></li>
+											<li role="presentation" <? if ($lang["current_lang"]):?> class="active" <? endif;?>>
+												<a href="<?=$lang["url"];?>" hreflang="<?=$lang["slug"];?>"><?=$lang["name"];?></a>
+											</li>
 											<?endforeach;?>
 										</ul>
 										
 										<ul class="nav nav-pills dnpb_langmenu visible-md visible-sm">
 											<?foreach($dnpb_langs as $lang):?>
-											<li role="presentation" <? if ($lang["current_lang"]):?> class="active" <? endif;?>><a href="<?=pll_home_url($lang["slug"]);?>"><?=$lang["slug"];?></a></li>
+											<li role="presentation" <? if ($lang["current_lang"]):?> class="active" <? endif;?>>
+												<a href="<?=$lang["url"];?>" hreflang="<?=$lang["slug"];?>"><?=$lang["slug"];?></a>
+											</li>
 											<?endforeach;?>
 										</ul>
 <!--

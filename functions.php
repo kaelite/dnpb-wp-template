@@ -363,3 +363,7 @@ function dnpb_register_widgets() {
 }
 
 add_action('widgets_init', 'dnpb_register_widgets');
+
+
+
+
