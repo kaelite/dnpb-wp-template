@@ -451,3 +451,8 @@ ul.nav.navbar-nav.dnpb_mainmenu li > ul.dropdown-menu a:hover{
 	background-color:#baa898;
 	background-image: none;
 }*/
+
+
+.dnpb_block td {
+	padding:5px;
+}
