@@ -57,7 +57,7 @@ class DNPB_News_Widget extends WP_Widget{
 
 	function getItems($numberOfListings) { //html
 		global $post;
-		add_image_size( 'news_widget_size', 110, 110, false );
+		add_image_size( 'news_widget_size', 140, 140, false );
 		$listings = new WP_Query();
 		$listings->query('post_type='.$this->post_type.'&posts_per_page=' . $numberOfListings );
 		if($listings->found_posts > 0) {
