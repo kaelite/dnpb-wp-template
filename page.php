@@ -8,25 +8,16 @@
 <div class="row">
 	<div class="col-md-12">
 		<h3><? the_title(); ?></h3>
-		<p class="dnpb_date"><?=get_the_date();?></p>
+<!--		<p class="dnpb_date"><?=get_the_date();?></p> -->
 	</div>
 </div>
-
-<div class="row">
-	<div class="col-md-6">
-		<p>
-			<?=get_the_excerpt();?>
-		</p>
-	</div>
-	<div class="col-md-6">
+<div style="float:right; margin:0 0 5px; 10px;">
 <?php 
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	the_post_thumbnail('medium');
 } 
 ?>
-	</div>
 </div>
-
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <? the_content() ?>
 <?php endwhile; else : ?>

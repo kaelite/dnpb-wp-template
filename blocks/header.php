@@ -96,9 +96,7 @@
 										<a class="pull-left" href="#"><img src="<? bloginfo('template_url');?>/assets/images/building_icon.png" alt="Image"></a>
 											<div class="media-body">
 												<address>
-	04060, Київ, М.Берлинського,  9 
-	<nobr>380 (44) 467-22-14</nobr> <a href="mailto:dnpb@i.ua">dnpb@i.ua</a>             
-	<a href="#"><nobr>Мапа проїзду</nobr></a>
+<? include('contacts.php'); ?>
 												</address>
 											</div>
 										</div>	
