@@ -12,6 +12,7 @@ foreach ( glob( trailingslashit( get_template_directory() ) . 'inc/*.php' ) as $
 
 function dnpb_loadscripts(){
 	/* Styles */
+	wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 	wp_enqueue_style('bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css');
 	wp_enqueue_style('bootstrap-theme', get_template_directory_uri().'/assets/css/bootstrap-theme.min.css');
 	wp_enqueue_style('font-awesome', get_template_directory_uri().'/assets/font-awesome/css/font-awesome.min.css');
@@ -335,6 +336,50 @@ function dnpb_init_ourpublications(){
 		]);
 }
    
+/**
+ * Register publication type
+ **/
+
+function dnpb_init_publications(){
+	$labels = [
+        'name'               => _x( 'Publications', 'post type general name' ),
+        'singular_name'      => _x( 'Publication', 'post type singular name' ),
+        'menu_name'          => _x( 'Publications', 'admin menu' ),
+        'name_admin_bar'     => _x( 'Publications', 'add new on admin bar' ),
+        'add_new'            => _x( 'Add Publication', 'Our Publication'),
+        'add_new_item'       => __( 'Add New Publication' ),
+        'new_item'           => __( 'New Publication' ),
+        'edit_item'          => __( 'Edit Publication' ),
+        'view_item'          => __( 'View Publication' ),
+        'all_items'          => __( 'All Publications' ),
+        'search_items'       => __( 'Search Publications' ),
+        'parent_item_colon'  => __( 'Parent Publication:' ),
+        'not_found'          => __( 'No publications found.' ),
+        'not_found_in_trash' => __( 'No publications found in Trash.' )
+		];
+
+	register_post_type('publications',
+		[
+			'labels'			 => $labels,
+			'public'			 => true,
+			'menu_icon'			 => 'dashicons-book',
+			'supports'			 => 
+			[
+				'title', 
+				'editor', 
+				'thumbnail', 
+				'excerpt',
+				'custom-fields'
+			],
+			'with_front'		 => false,
+			'rewrite'            => [ 'slug' => 'publications' ],
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null
+		]);
+}
+   
 function dnpb_init_categories(){
 	dnpb_init_news();
 	dnpb_init_slider();
@@ -342,6 +387,7 @@ function dnpb_init_categories(){
 	dnpb_init_events();
 	dnpb_init_exhibitions();
 	dnpb_init_ourpublications();
+	dnpb_init_publications();
 }
 add_action('init', 'dnpb_init_categories');
 
