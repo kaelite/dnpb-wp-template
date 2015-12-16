@@ -398,6 +398,7 @@ include ('widgets/gallery/class.php');
 include ('widgets/events/class.php');
 include ('widgets/exhibitions/class.php');
 include ('widgets/ourpublications/class.php');
+include ('widgets/publications/class.php');
 
 function dnpb_register_widgets() {
 	register_widget('DNPB_News_Widget');
@@ -406,6 +407,7 @@ function dnpb_register_widgets() {
 	register_widget('DNPB_Events_Widget');
 	register_widget('DNPB_Exhibitions_Widget');
 	register_widget('DNPB_OurPublications_Widget');
+	register_widget('DNPB_Publications_Widget');
 }
 
 add_action('widgets_init', 'dnpb_register_widgets');
