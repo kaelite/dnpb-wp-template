@@ -25,6 +25,9 @@ body {
 	font-size: 20px;
 	color: #663300;
 }
+.dnpb_block h5 {
+	font-size: 17px;
+}
 
 .dnpb_video {
 	position:relative;
