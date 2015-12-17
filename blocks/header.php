@@ -83,9 +83,9 @@
 
 									<div class="col-md-5 hidden-sm dnpb_socials">
 									<div>
-								<a href="#" class="btn azm-social azm-size-32 azm-r-square azm-rss" style="color:white"><i class="fa fa-rss"></i></a>
+								<a href="feed://www.dnpb.gov.ua/rss/" class="btn azm-social azm-size-32 azm-r-square azm-rss" style="color:white"><i class="fa fa-rss"></i></a>
 								<a href="http://www.facebook.com/pages/%D0%94%D0%9D%D0%9F%D0%91-%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8-%D1%96%D0%BC-%D0%92-%D0%9E-%D0%A1%D1%83%D1%85%D0%BE%D0%BC%D0%BB%D0%B8%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE/240019389383740" class="btn azm-social azm-size-32 azm-r-square azm-facebook"  style="color:white"><i class="fa fa-facebook"></i></a>	
-								<a href="#" class="btn azm-social azm-size-32  azm-r-square azm-linkedin"><i class="fa fa-linkedin" style="color:white"></i></a>
+								<a href="http://ua.linkedin.com/pub/днпб-сухомлинського/7b/79a/824/" class="btn azm-social azm-size-32  azm-r-square azm-linkedin"><i class="fa fa-linkedin" style="color:white"></i></a>
 									</div>
 									</div>
 								</div>
