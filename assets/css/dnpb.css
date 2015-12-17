@@ -466,3 +466,7 @@ ul.nav.navbar-nav.dnpb_mainmenu li > ul.dropdown-menu a:hover{
 		padding-bottom:5px;
 	}
 }
+
+tr.dnpb_contentheader {
+		font-size:15px;
+	}
