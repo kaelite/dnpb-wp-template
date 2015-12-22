@@ -378,6 +378,7 @@ function dnpb_init_publications(){
 			'hierarchical'       => false,
 			'menu_position'      => null
 		]);
+	add_image_size( 'dnpb_publications-thumb', 120, 200 );
 }
    
 function dnpb_init_categories(){

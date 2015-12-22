@@ -473,3 +473,25 @@ ul.nav.navbar-nav.dnpb_mainmenu li > ul.dropdown-menu a:hover{
 tr.dnpb_contentheader {
 		font-size:15px;
 	}
+
+/* --- */
+.dnpb_publications .dnpb_innerblock{
+	padding: 0px 0px 20px 0;
+	border:none;
+	
+}
+.dnpb_publications .dnpb_contentheader{
+	height: auto;
+	padding: 10px 10px 5px 20px;
+	margin:0px 0px 20px 0px;
+}
+
+.dnpb_publications_thumb {
+	margin-left:15px;
+	margin-right:10px;
+}
+
+.dnpb_publications_title {
+	color:#663300;
+	font-style: italic;
+}
