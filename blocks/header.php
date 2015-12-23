@@ -112,7 +112,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-					<? dnpb_breadcrumbs();?>
+							<? dnpb_breadcrumbs();?>
 							</div>
 						</div>
 					</div>

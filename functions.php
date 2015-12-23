@@ -415,4 +415,15 @@ add_action('widgets_init', 'dnpb_register_widgets');
 
 
 
+add_action( 'after_setup_theme', 'dnpb_2_theme_setup' );
+function dnpb_2_theme_setup() {
+	add_image_size( 'dnpb-portrait-custom-size', 150, 200 );
+}
+ 
+function dnpb_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'dnpb-portrait-custom-size' => __( 'Portrait size (150x200)' ),
+    ) );
+}
 
+add_filter( 'image_size_names_choose', 'dnpb_custom_sizes' );

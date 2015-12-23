@@ -7,6 +7,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6" style="height:500px">
+<?  get_template_part('blocks/contentmode'); ?>
 <section class="dnpb_block" style="height:500px">
 
 

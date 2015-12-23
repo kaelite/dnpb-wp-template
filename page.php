@@ -2,9 +2,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
+<?  get_template_part('blocks/contentmode'); ?>
 <section class="dnpb_block">
-
-
 <div class="row">
 	<div class="col-md-12">
 		<h3><? the_title(); ?></h3>

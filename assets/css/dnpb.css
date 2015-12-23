@@ -495,3 +495,27 @@ tr.dnpb_contentheader {
 	color:#663300;
 	font-style: italic;
 }
+
+.dnpb_contentmode_block {
+	float:right;
+	margin-top: -23px;
+	margin-right: 17px;
+}
+
+.dnpb_contentmode_block a#dnpb_modesize1{
+	font-size:14px;
+}
+.dnpb_contentmode_block a#dnpb_modesize2{
+	font-size:16px;
+}
+.dnpb_contentmode_block a#dnpb_modesize3{
+	font-size:19px;
+}
+.dnpb_contentmode_block a#dnpb_contentprint{
+	margin-right:12px;
+	font-size: 16px;
+}
+.dnpb_contentmode_block a#dnpb_contentsend{
+	margin-right:4px;
+	font-size: 16px;
+}
