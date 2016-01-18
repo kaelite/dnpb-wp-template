@@ -126,7 +126,7 @@ gapi.analytics.ready(function() {
 		<h3><? the_title(); ?></h3>
 
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="dnpb-stat-dashboard">
 					<header class="titles">
 						<h3 class="titles-main">Site Traffic</h3>
@@ -136,7 +136,9 @@ gapi.analytics.ready(function() {
 					<div id="chart-1-container"></div>
 				</div>
 			</div>
+		</div>
 
+		<div class="row">
 			<div class="col-md-6">
 				<div class="dnpb-stat-dashboard">
 				<header class="titles">
@@ -146,10 +148,6 @@ gapi.analytics.ready(function() {
 					<div id="chart-2-container"></div>
 				</div>
 			</div>
-
-		</div>
-
-		<div class="row">
 			<div class="col-md-6">
 				<div class="dnpb-stat-dashboard">
 				<header class="titles">
