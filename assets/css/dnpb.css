@@ -529,3 +529,23 @@ tr.dnpb_contentheader {
 	padding: 2em;
 	margin: 10px 0 10px 0px;
 }
+
+.wp-caption {
+	background: none;
+	border: 1px solid #d4d2d0;
+}
+
+.wp-caption p{
+	font-size: 85%;
+	color: #663300;
+	line-height: 130%;
+}
+
+.page-numbers {
+	padding: 3px;
+}
+
+.page-numbers.current {
+	background: #cec6b7;
+}
+
