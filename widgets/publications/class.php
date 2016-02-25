@@ -71,6 +71,7 @@ class DNPB_Publications_Widget extends DNPB_Custom_Widget{
         </div>
 <? } ?>
     </div>
+	<a href="<?=get_post_type_archive_link( $this->post_type );?>" class="pull-right dnpb-link"><?=__('Всі матеріали');?></a><br/>
 <?
             wp_reset_postdata();
         }else{

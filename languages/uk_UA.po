@@ -4,13 +4,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DNPB 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/dnpb\n"
-"POT-Creation-Date: 2016-02-20 20:24:05+00:00\n"
+"POT-Creation-Date: 2016-02-20 22:29+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-02-24 14:18+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk_UA\n"
 
 #: archive-announces.php:21 archive-events.php:28 archive-exhibitions.php:28
 #: archive-indexes.php:12 archive-news.php:27 archive-ourpublications.php:28
@@ -22,11 +26,11 @@ msgstr ""
 
 #: archive-indexes.php:19 blocks/paging.php:5 taxonomy-dnpb_index_list.php:38
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: archive-indexes.php:20 blocks/paging.php:6 taxonomy-dnpb_index_list.php:39
 msgid "Onward"
-msgstr ""
+msgstr "Далі"
 
 #: functions.php:60 functions.php:75 functions.php:82
 msgid "Here the place to put sidebar's widgets"
@@ -34,7 +38,7 @@ msgstr ""
 
 #: functions.php:105
 msgid "Main Menu"
-msgstr ""
+msgstr "Головне меню"
 
 #: functions.php:106
 msgid "Top Menu"
@@ -43,47 +47,47 @@ msgstr ""
 #: functions.php:132
 msgctxt "post type general name"
 msgid "News"
-msgstr ""
+msgstr "Новини"
 
 #: functions.php:133
 msgctxt "post type singular name"
 msgid "News"
-msgstr ""
+msgstr "Новина"
 
 #: functions.php:134
 msgctxt "admin menu"
 msgid "News"
-msgstr ""
+msgstr "Новини"
 
 #: functions.php:135
 msgctxt "add new on admin bar"
 msgid "News"
-msgstr ""
+msgstr "Новини"
 
 #: functions.php:136
 msgctxt "News"
 msgid "Add New"
-msgstr ""
+msgstr "Додати новину"
 
 #: functions.php:137
 msgid "Add New News"
-msgstr ""
+msgstr "Додати новину"
 
 #: functions.php:138
 msgid "New News"
-msgstr ""
+msgstr "Нова Новина"
 
 #: functions.php:139
 msgid "Edit News"
-msgstr ""
+msgstr "Редагувати Новину"
 
 #: functions.php:140
 msgid "View News"
-msgstr ""
+msgstr "Список новин"
 
 #: functions.php:141
 msgid "All News"
-msgstr ""
+msgstr "Усі новини"
 
 #: functions.php:142
 msgid "Search News"
@@ -104,47 +108,47 @@ msgstr ""
 #: functions.php:166
 msgctxt "post type general name"
 msgid "Announcements"
-msgstr ""
+msgstr "Анонси та оголошення"
 
 #: functions.php:167
 msgctxt "post type singular name"
 msgid "Announcement"
-msgstr ""
+msgstr "Анонси та оголошення"
 
 #: functions.php:168
 msgctxt "admin menu"
 msgid "Announcements"
-msgstr ""
+msgstr "Анонси та оголошення"
 
 #: functions.php:169
 msgctxt "add new on admin bar"
 msgid "Announcements"
-msgstr ""
+msgstr "Анонси та оголошення"
 
 #: functions.php:170
 msgctxt "Announcement"
 msgid "Add Announcement"
-msgstr ""
+msgstr "Додати новий запис"
 
 #: functions.php:171
 msgid "Add New Announcement"
-msgstr ""
+msgstr "Додати новий запис"
 
 #: functions.php:172
 msgid "New Announcement"
-msgstr ""
+msgstr "Нове оголошення"
 
 #: functions.php:173
 msgid "Edit Announcement"
-msgstr ""
+msgstr "Редагувати"
 
 #: functions.php:174
 msgid "View Announcements"
-msgstr ""
+msgstr "Переглянути"
 
 #: functions.php:175
 msgid "All Announcements"
-msgstr ""
+msgstr "Всі анонси"
 
 #: functions.php:176
 msgid "Search Announcements"
@@ -165,7 +169,7 @@ msgstr ""
 #: functions.php:220
 msgctxt "post type general name"
 msgid "Events"
-msgstr ""
+msgstr "Заходи"
 
 #: functions.php:221
 msgctxt "post type singular name"
@@ -175,7 +179,7 @@ msgstr ""
 #: functions.php:222
 msgctxt "admin menu"
 msgid "Events"
-msgstr ""
+msgstr "Заходи"
 
 #: functions.php:223
 msgctxt "add new on admin bar"
@@ -185,27 +189,27 @@ msgstr ""
 #: functions.php:224
 msgctxt "Announcement"
 msgid "Add Event"
-msgstr ""
+msgstr "Додати елемент"
 
 #: functions.php:225
 msgid "Add New Event"
-msgstr ""
+msgstr "Додати новий захід"
 
 #: functions.php:226
 msgid "New Event"
-msgstr ""
+msgstr "Новий захід"
 
 #: functions.php:227
 msgid "Edit Event"
-msgstr ""
+msgstr "Редагувати"
 
 #: functions.php:228
 msgid "View Events"
-msgstr ""
+msgstr "Переглянути"
 
 #: functions.php:229
 msgid "All Events"
-msgstr ""
+msgstr "Усі заходи"
 
 #: functions.php:230
 msgid "Search Events"
@@ -226,51 +230,51 @@ msgstr ""
 #: functions.php:254
 msgctxt "post type general name"
 msgid "Slides"
-msgstr ""
+msgstr "Слайди"
 
 #: functions.php:255
 msgctxt "post type singular name"
 msgid "Slide"
-msgstr ""
+msgstr "Слайд"
 
 #: functions.php:256
 msgctxt "admin menu"
 msgid "Slides"
-msgstr ""
+msgstr "Слайди"
 
 #: functions.php:257
 msgctxt "add new on admin bar"
 msgid "Slides"
-msgstr ""
+msgstr "Слайди"
 
 #: functions.php:258
 msgctxt "Slides"
 msgid "Add Slide"
-msgstr ""
+msgstr "Додати елемент"
 
 #: functions.php:259
 msgid "Add New Slide"
-msgstr ""
+msgstr "Додати елемент"
 
 #: functions.php:260
 msgid "New Slide"
-msgstr ""
+msgstr "Новий елемент"
 
 #: functions.php:261
 msgid "Edit Slide"
-msgstr ""
+msgstr "Редагувати"
 
 #: functions.php:262
 msgid "View Slide"
-msgstr ""
+msgstr "Перегляд"
 
 #: functions.php:263
 msgid "All Slides"
-msgstr ""
+msgstr "Всі елементи"
 
 #: functions.php:264
 msgid "Search Slides"
-msgstr ""
+msgstr "Пошук"
 
 #: functions.php:265
 msgid "Parent Slides:"
@@ -287,47 +291,47 @@ msgstr ""
 #: functions.php:292
 msgctxt "post type general name"
 msgid "Exhibitions"
-msgstr ""
+msgstr "Виставки"
 
 #: functions.php:293
 msgctxt "post type singular name"
 msgid "Exhibition"
-msgstr ""
+msgstr "Виставки"
 
 #: functions.php:294
 msgctxt "admin menu"
 msgid "Exhibitions"
-msgstr ""
+msgstr "Виставки"
 
 #: functions.php:295
 msgctxt "add new on admin bar"
 msgid "Exhibitions"
-msgstr ""
+msgstr "Виставки"
 
 #: functions.php:296
 msgctxt "Slides"
 msgid "Add Exhibition"
-msgstr ""
+msgstr "Додати запис"
 
 #: functions.php:297
 msgid "Add New Exhibition"
-msgstr ""
+msgstr "Додати нову виставку"
 
 #: functions.php:298
 msgid "New Exhibition"
-msgstr ""
+msgstr "Нова виставка"
 
 #: functions.php:299
 msgid "Edit Exhibition"
-msgstr ""
+msgstr "Редагувати"
 
 #: functions.php:300
 msgid "View Exhibition"
-msgstr ""
+msgstr "Переглянути"
 
 #: functions.php:301
 msgid "All Exhibitions"
-msgstr ""
+msgstr "Усі виставки"
 
 #: functions.php:302
 msgid "Search Exhibitions"
@@ -348,47 +352,47 @@ msgstr ""
 #: functions.php:329
 msgctxt "post type general name"
 msgid "Our Publications"
-msgstr ""
+msgstr "Наши видання"
 
 #: functions.php:330
 msgctxt "post type singular name"
 msgid "Our Publication"
-msgstr ""
+msgstr "Наши видання"
 
 #: functions.php:331
 msgctxt "admin menu"
 msgid "Our Publications"
-msgstr ""
+msgstr "Наши видання"
 
 #: functions.php:332
 msgctxt "add new on admin bar"
 msgid "Our Publications"
-msgstr ""
+msgstr "Наши видання"
 
 #: functions.php:333
 msgctxt "Our Publication"
 msgid "Add Our Publication"
-msgstr ""
+msgstr "Додати запис"
 
 #: functions.php:334 functions.php:371
 msgid "Add New Publication"
-msgstr ""
+msgstr "Додати нову публікацію"
 
 #: functions.php:335 functions.php:372
 msgid "New Publication"
-msgstr ""
+msgstr "Нова публікація"
 
 #: functions.php:336 functions.php:373
 msgid "Edit Publication"
-msgstr ""
+msgstr "Редагувати"
 
 #: functions.php:337 functions.php:374
 msgid "View Publication"
-msgstr ""
+msgstr "Переглянути"
 
 #: functions.php:338 functions.php:375
 msgid "All Publications"
-msgstr ""
+msgstr "Всі елементи"
 
 #: functions.php:339 functions.php:376
 msgid "Search Publications"
@@ -409,60 +413,60 @@ msgstr ""
 #: functions.php:366
 msgctxt "post type general name"
 msgid "Publications"
-msgstr ""
+msgstr "Публікації"
 
 #: functions.php:367
 msgctxt "post type singular name"
 msgid "Publication"
-msgstr ""
+msgstr "Публікації"
 
 #: functions.php:368
 msgctxt "admin menu"
 msgid "Publications"
-msgstr ""
+msgstr "Публікації"
 
 #: functions.php:369
 msgctxt "add new on admin bar"
 msgid "Publications"
-msgstr ""
+msgstr "Публікації"
 
 #: functions.php:370
 msgctxt "Our Publication"
 msgid "Add Publication"
-msgstr ""
+msgstr "Додати запис"
 
 #: functions.php:411
 msgctxt "post type general name"
 msgid "Indexes"
-msgstr ""
+msgstr "Покажчики"
 
 #: functions.php:412
 msgctxt "post type singular name"
 msgid "Index"
-msgstr ""
+msgstr "Покажчик"
 
 #: functions.php:413
 msgctxt "admin menu"
 msgid "Indexes"
-msgstr ""
+msgstr "Покажчики"
 
 #: functions.php:414
 msgctxt "add new on admin bar"
 msgid "Indexes"
-msgstr ""
+msgstr "Покажчики"
 
 #: functions.php:415
 msgctxt "Indexes"
 msgid "Add New Index Info"
-msgstr ""
+msgstr "Додати елемент"
 
 #: functions.php:416
 msgid "Add New Index Info"
-msgstr ""
+msgstr "Додати елемент"
 
 #: functions.php:417
 msgid "New Index Info"
-msgstr ""
+msgstr "Новий покажчик"
 
 #: functions.php:418
 msgid "Edit Publica"
@@ -474,7 +478,7 @@ msgstr ""
 
 #: functions.php:420
 msgid "All Indexes"
-msgstr ""
+msgstr "Всі елементи"
 
 #: functions.php:421
 msgid "Search Indexes"
@@ -494,7 +498,7 @@ msgstr ""
 
 #: functions.php:456
 msgid "Indexes list groups"
-msgstr ""
+msgstr "Групи покажчиків"
 
 #: functions.php:506
 msgid "Portrait size (150x200)"
@@ -542,16 +546,12 @@ msgstr ""
 msgid "Text"
 msgstr ""
 
-#. #-#-#-#-#  dnpb.pot (DNPB 0.0.1)  #-#-#-#-#
 #. Theme Name of the plugin/theme
-#. #-#-#-#-#  dnpb.pot (DNPB 0.0.1)  #-#-#-#-#
 #. Author of the plugin/theme
 msgid "DNPB"
 msgstr ""
 
-#. #-#-#-#-#  dnpb.pot (DNPB 0.0.1)  #-#-#-#-#
 #. Theme URI of the plugin/theme
-#. #-#-#-#-#  dnpb.pot (DNPB 0.0.1)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://v2.dnpb.gov.ua/"
 msgstr ""
@@ -571,7 +571,7 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "GA Statistics Page"
-msgstr ""
+msgstr "Сторінка статистики GA"
 
 #. Template Name of the plugin/theme
 msgid "Full Width Page"

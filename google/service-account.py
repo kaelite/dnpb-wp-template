@@ -4,11 +4,13 @@
 import json
 from oauth2client.client import SignedJwtAssertionCredentials
 
+import os
+CDIR = os.path.dirname(os.path.abspath(__file__))
 # The scope for the OAuth2 request.
 SCOPE = 'https://www.googleapis.com/auth/analytics.readonly'
 
 # The location of the key file with the key data.
-KEY_FILEPATH = '/home/www.depot/v2.dnpb.gov.ua/root/wp-content/themes/dnpb/google/json-key.json'
+KEY_FILEPATH = CDIR + '/json-key.json'
 
 # Load the key file's private data.
 with open(KEY_FILEPATH) as key_file:

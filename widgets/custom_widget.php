@@ -10,6 +10,7 @@ class DNPB_Custom_Widget extends WP_Widget{
 		"crop" => false
 		];
 
+	var $showfield = "title";
 
 	function __construct() {
 		parent::__construct(
@@ -90,7 +91,15 @@ class DNPB_Custom_Widget extends WP_Widget{
 						</a>
 				<? endif; ?>
 				<div class="media-body">
-				<p><a href="<?=get_the_permalink();?>"><?=get_the_title()?></a></p>
+					<p><a href="<?=get_the_permalink();?>"><?
+					switch($this->showfield){
+						case "content":
+							echo get_the_content();
+						case "title":
+						default:
+							echo get_the_title();
+					};
+					?></a></p>
 				</div>
 			</div>										
 		</div>

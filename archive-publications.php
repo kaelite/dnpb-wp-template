@@ -4,7 +4,7 @@
 		<div class="col-md-8">
 <section class="dnpb_block dnpb_publications">
 <h3><?php post_type_archive_title( '', true ); ?></h3>
-
+<br/>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="media dnpb_innerblock">
 	<h3 class="dnpb_contentheader"><?=get_the_title();?></h3>
@@ -44,6 +44,7 @@
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+<?php get_template_part( 'blocks/paging'); ?>
 
 <br/>
 </section>

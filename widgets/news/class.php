@@ -79,7 +79,7 @@ class DNPB_News_Widget extends WP_Widget{
 									<? endif; ?>
 										
 										<div class="media-body">
-										<a href="<?=get_the_permalink();?>"><h4 class="media-heading"><b><?=get_the_title();?></b></h4></a>
+										<a href="<?=get_the_permalink();?>"><h4 class="media-heading"><?=get_the_title();?></h4></a>
 											<p><?=get_the_excerpt();?></p>
 										
 										</div>

@@ -16,9 +16,7 @@
 			<div class="media-body">
 				<a href="<? the_permalink() ?>">
 					<h4 class="media-heading">
-						<b>
-							<?=get_the_title();?>
-						</b>
+						<?=get_the_title();?>
 					</h4>
 				</a>
 			<? the_excerpt() ?>
@@ -28,7 +26,7 @@
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-
+<?php get_template_part( 'blocks/paging'); ?>
 <br/>
 </section>
 		</div>

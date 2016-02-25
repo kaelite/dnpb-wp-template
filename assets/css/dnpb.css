@@ -539,6 +539,7 @@ tr.dnpb_contentheader {
 	font-size: 85%;
 	color: #663300;
 	line-height: 130%;
+	font-weight: 100;
 }
 
 .page-numbers {
@@ -547,5 +548,9 @@ tr.dnpb_contentheader {
 
 .page-numbers.current {
 	background: #cec6b7;
+}
+
+.dnpb_block hr {
+	border-top: 1px solid #b7afa4;
 }
 

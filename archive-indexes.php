@@ -6,21 +6,14 @@
 <h3><?php post_type_archive_title( '', true ); ?></h3>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="media dnpb_innerblock">
-        <h5><font color="#663300">08.05.2015</font></h5>
-		<a class="pull-left" href="<? the_permalink() ?>">
-			<? the_post_thumbnail([120,0], ['alt' => 'image']) ?>
-        </a>
-        <div class="media-body">
-                <p>
-<? the_excerpt() ?>
-                </p>
-        </div>
-</div>
+<?php get_template_part( 'blocks/content/list', 'index' ); ?>
+
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+
 <?php get_template_part( 'blocks/paging'); ?>
+
 <br/>
 </section>
 		</div>
