@@ -169,9 +169,12 @@ if ( !function_exists( 'dnpb_breadcrumbs' ) ) {
 
 			// get the name of the taxonomy
 			$custom_tax_name = get_queried_object()->name;
-
+			$_category = get_category(get_queried_object());
+			//echo "<pre>";
+			//var_dump($_category);
+			//echo "</pre>";
 			// Add markup for taxonomy
-			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_attr($custom_tax_name) . '</span></span>';
+			$html .= '<span class="item-current item-archive"><span class="bread-current bread-archive">' . esc_attr($_category->label) . '</span></span>';
 		} // Search
 		elseif ( is_search() ) {
 

@@ -429,7 +429,7 @@ function dnpb_init_indexes(){
         'add_new'            => _x( 'Add New Index Info', 'Indexes', 'dnpb'),
         'add_new_item'       => __( 'Add New Index Info', 'dnpb'),
         'new_item'           => __( 'New Index Info', 'dnpb'),
-        'edit_item'          => __( 'Edit Publica', 'dnpb'),
+        'edit_item'          => __( 'Edit Index Info', 'dnpb'),
         'view_item'          => __( 'View Index Info', 'dnpb'),
         'all_items'          => __( 'All Indexes', 'dnpb'),
         'search_items'       => __( 'Search Indexes', 'dnpb'),
