@@ -20,7 +20,7 @@ if ( has_post_thumbnail() ) {
 ?>
         <div class="media-body">
 				<p class="">
-<?=get_the_content() ?>
+					<?=get_the_content() ?>
                 </p>
         </div>
 </div>
